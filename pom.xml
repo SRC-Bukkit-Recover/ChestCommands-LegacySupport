@@ -41,7 +41,7 @@
       <artifactId>chestcommands-plugin</artifactId>
       <groupId>com.gmail.filoghost.chestcommands</groupId>
       <scope>provided</scope>
-      <version>3.4.3</version>
+      <version>LATEST</version>
     </dependency>
     <dependency>
       <artifactId>spigot-api</artifactId>
