@@ -46,7 +46,7 @@ public final class ChestCommandsLegacySupport extends Addon implements Listener 
       legacy = true;
       String value = section.getString(Nodes.PRICE, "0");
       MoneyIconRequirement requirement = new MoneyIconRequirement();
-      requirement.setValue(value);
+      requirement.setValues(value);
       requirements.addDefaultClickRequirement(requirement);
     }
 
@@ -54,7 +54,7 @@ public final class ChestCommandsLegacySupport extends Addon implements Listener 
       legacy = true;
       String value = section.getString(Nodes.POINTS, "0");
       PointIconRequirement requirement = new PointIconRequirement();
-      requirement.setValue(value);
+      requirement.setValues(value);
       requirements.addDefaultClickRequirement(requirement);
     }
 
@@ -62,7 +62,7 @@ public final class ChestCommandsLegacySupport extends Addon implements Listener 
       legacy = true;
       String value = section.getString(Nodes.TOKENS, "0");
       TokenIconRequirement requirement = new TokenIconRequirement();
-      requirement.setValue(value);
+      requirement.setValues(value);
       requirements.addDefaultClickRequirement(requirement);
     }
 
@@ -70,7 +70,7 @@ public final class ChestCommandsLegacySupport extends Addon implements Listener 
       legacy = true;
       String value = section.getString(Nodes.EXP_LEVELS, "0");
       ExpLevelIconRequirement requirement = new ExpLevelIconRequirement();
-      requirement.setValue(value);
+      requirement.setValues(value);
       requirements.addDefaultClickRequirement(requirement);
     }
 
@@ -81,21 +81,21 @@ public final class ChestCommandsLegacySupport extends Addon implements Listener 
         if (section.isSet(subsection)) {
           String value = section.getString(subsection);
           ItemIconRequirement requirement = new ItemIconRequirement();
-          requirement.setValue(value);
+          requirement.setValues(value);
           requirements.addClickRequirement(requirement, type);
         }
       }
       if (section.isSet(Nodes.REQUIRED_ITEM_DEFAULT)) {
         String value = section.getString(Nodes.REQUIRED_ITEM_DEFAULT);
         ItemIconRequirement requirement = new ItemIconRequirement();
-        requirement.setValue(value);
+        requirement.setValues(value);
         requirements.addDefaultClickRequirement(requirement);
       }
     } else if (section.isSet(Nodes.REQUIRED_ITEM)) {
       legacy = true;
       String value = section.getString(Nodes.REQUIRED_ITEM);
       ItemIconRequirement requirement = new ItemIconRequirement();
-      requirement.setValue(value);
+      requirement.setValues(value);
       requirements.addDefaultClickRequirement(requirement);
     }
 
@@ -103,7 +103,7 @@ public final class ChestCommandsLegacySupport extends Addon implements Listener 
       legacy = true;
       String value = section.getString(Nodes.PERMISSION);
       PermissionIconRequirement requirement = new PermissionIconRequirement();
-      requirement.setValue(value);
+      requirement.setValues(value);
       if (section.isSet(Nodes.PERMISSION_MESSAGE)) {
         requirement.setFailMessage(section.getString(Nodes.PERMISSION_MESSAGE));
       }
@@ -114,7 +114,7 @@ public final class ChestCommandsLegacySupport extends Addon implements Listener 
       legacy = true;
       String value = section.getString(Nodes.VIEW_PERMISSION);
       PermissionIconRequirement requirement = new PermissionIconRequirement();
-      requirement.setValue(value);
+      requirement.setValues(value);
       requirements.addViewRequirement(requirement);
     }
 
@@ -123,7 +123,7 @@ public final class ChestCommandsLegacySupport extends Addon implements Listener 
       legacy = true;
       String value = section.getString(Nodes.VIEW_REQUIREMENT);
       ConditionIconRequirement requirement = new ConditionIconRequirement();
-      requirement.setValue(value);
+      requirement.setValues(value);
       requirements.addViewRequirement(requirement);
     }
 
@@ -132,7 +132,7 @@ public final class ChestCommandsLegacySupport extends Addon implements Listener 
       legacy = true;
       String value = section.getString(Nodes.CLICK_REQUIREMENT);
       ConditionIconRequirement requirement = new ConditionIconRequirement();
-      requirement.setValue(value);
+      requirement.setValues(value);
       if (section.isSet(Nodes.CLICK_REQUIREMENT_MESSAGE)) {
         requirement.setFailMessage(section.getString(Nodes.CLICK_REQUIREMENT_MESSAGE));
       }
